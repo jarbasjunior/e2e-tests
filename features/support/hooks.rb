@@ -2,6 +2,8 @@ Before do
   $stdin = ->(klass) { klass.new }
 
   page.current_window.resize_to(1440, 900)
+  $stdin.call(HomePage).load
+  $stdin.call(HomePage).clear_list
 end
 
 After do |scenario|

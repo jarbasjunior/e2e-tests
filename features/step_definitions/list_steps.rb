@@ -1,11 +1,5 @@
-Dado('que navego para home do site') do
-  $stdin.call(HomePage).load
-  $stdin.call(HomePage).clear_list
-end
-
 Dado('que tenho itens adicionados na minha lista') do
   steps %(
-    Dado que navego para home do site
     Quando adiciono itens à minha lista
     |item 1|item 2|item 3|item 4|
   )
