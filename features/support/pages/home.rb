@@ -18,10 +18,7 @@ class HomePage < SitePrism::Page
   end
 
   def items
-    all_itens = 'li label'
-    page.has_css?(all_itens)
-    all(all_itens).last.visible?
-    page.all(:css, all_itens).map(&:text)
+    all(:css, 'li label').map(&:text)
   end
 
   def solve_itens(itens)
@@ -37,9 +34,13 @@ class HomePage < SitePrism::Page
   end
 
   def clear_list
-    while has_xpath?("//ul[@id='todo-list']/li[1]")
+    until empty_list?
       first_item.hover
       icon_destroy.click
     end
+  end
+
+  def empty_list?
+    all('li label').empty?
   end
 end
