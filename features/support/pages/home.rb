@@ -24,6 +24,18 @@ class HomePage < SitePrism::Page
     page.all(:css, all_itens).map(&:text)
   end
 
+  def solve_itens(itens)
+    itens.each do |item|
+      find(:xpath, "//label[text()='#{item}']/../input").click
+    end
+  end
+
+  def solved?(item)
+    element = "//label[text()='#{item}']/../input"
+    has_xpath?(element)
+    find(:xpath, element).checked?
+  end
+
   def clear_list
     while has_xpath?("//ul[@id='todo-list']/li[1]")
       first_item.hover
