@@ -1,0 +1,15 @@
+---
+  default: -p chrome -p html -p json
+  ci: -p chrome_headless -p json
+  
+  bdd: --format pretty
+  progress: --format progress
+  html: --format html --out=report/report.html
+  json: --format json --out=report/report.json
+  
+  chrome: -p bdd BROWSER=chrome
+  chrome_headless: -p bdd BROWSER=chrome_headless
+  firefox: -p bdd BROWSER=firefox
+  firefox_headless: -p bdd BROWSER=firefox_headless
+  
+  

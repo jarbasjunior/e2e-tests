@@ -1,0 +1,7 @@
+report.html
+report.json
+/report/screenshots/*.png
+Gemfile.lock
+.byebug_history
+.ruby-version
+.env

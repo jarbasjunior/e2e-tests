@@ -1,0 +1,13 @@
+source 'https://rubygems.org'
+
+gem 'awesome_print', '1.8'
+gem 'byebug'
+gem 'capybara', '3.32.1'
+gem 'cucumber', '3.1.2'
+gem 'dotenv', '2.7'
+gem 'report_builder'
+gem 'rspec'
+gem 'rubocop'
+gem 'selenium-webdriver', '3.142.7'
+gem 'site_prism', '3.4.2'
+gem 'solargraph', '0.39.15'
